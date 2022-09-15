@@ -43,7 +43,7 @@ func V1CreateUserController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, e.Error())
 	}
 
-	return c.JSON(http.StatusOK, map[string]interface{}{
+	return c.JSON(http.StatusCreated, map[string]interface{}{
 		"success": true,
 		"message": "Successfully insert data.",
 		"data":    user,
