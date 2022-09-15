@@ -23,8 +23,8 @@ func New() *echo.Echo {
 	v1Book.GET("", controllers.V1GetBookControllers)
 	v1Book.GET("/:id", controllers.V1GetBookByIdControllers)
 	v1Book.POST("", controllers.V1CreateBookController)
-	// v1Book.PUT("/:id", controllers.V1UpdateBookByIdControllers)
-	// v1Book.DELETE("/:id", controllers.V1DeleteBookControllers)
+	v1Book.PUT("/:id", controllers.V1UpdateBookByIdControllers)
+	v1Book.DELETE("/:id", controllers.V1DeleteBookControllers)
 
 	return e
 }
